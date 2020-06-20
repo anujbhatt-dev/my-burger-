@@ -1,13 +1,17 @@
 import React from "react";
 import BurgerIngredient from "./burger-ingredient/burger-ingredient"
 const Burger = props =>{
-   const transformedIngredients = Object.keys(props.ingredients)
+   let transformedIngredients = Object.keys(props.ingredients)
    .map((isKey)=>{return(
      [...Array(props.ingredients[isKey])].map((_,i)=>{return (
        <BurgerIngredient key={isKey + i} type={isKey}/>
      )})
-   )})
-   console.log(transformedIngredients);
+   )}).reduce((arr,el)=>{
+     return arr.concat(el);
+   },[])
+   if(transformedIngredients.length===0){
+     transformedIngredients = <p>please start adding ingredients</p>
+   }
   return (
     <div className="Burger">
       <BurgerIngredient type="BreadTop"/>
