@@ -1,40 +1,3 @@
-/*
-0 t0 600 : phone;
-600 t0 900 : tab portrait;
-900 t0 1200 : tab landscape;
-1200 to 1800 : default;
-1800 + : big desktop
-*/
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  font-size: 62.5%;
-}
-@media only screen and (max-width: 75em) {
-  html {
-    font-size: 56.25%;
-  }
-}
-@media only screen and (max-width: 56.25em) {
-  html {
-    font-size: 50%;
-  }
-}
-@media only screen and (min-width: 112.5em) {
-  html {
-    font-size: 75%;
-  }
-}
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
 .BreadBottom {
   height: 13%;
   width: 80%;
@@ -146,26 +109,4 @@ body {
   height: 3%;
   background: linear-gradient(#bf3813, #c45e38);
   margin: 2% auto;
-}
-
-.Burger {
-  width: 50%;
-  margin: auto;
-  height: 40rem;
-  overflow: scroll;
-  text-align: center;
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-@media only screen and (max-width: 56.25em) {
-  .Burger {
-    width: 70rem;
-    height: 60rem;
-  }
-}
-@media only screen and (max-width: 37.5em) {
-  .Burger {
-    width: 35rem;
-    height: 30rem;
-  }
 }
