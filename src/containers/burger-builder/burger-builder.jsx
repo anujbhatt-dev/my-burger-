@@ -13,10 +13,10 @@ const INGREDIENT_PRICE = {
 class BurgerBuilder extends Component{
   state = {
     ingredients:{
-      Salad:0,
-      Bacon:0,
-      Cheese:0,
-      Meat:0
+      salad:0,
+      bacon:0,
+      cheese:0,
+      meat:0
     },
     totalPrice:4
   }
@@ -31,8 +31,8 @@ class BurgerBuilder extends Component{
      const oldPrice = this.state.totalPrice;
      const newPrice = oldPrice + priceAddition;
      this.setState({
-       totalPrice:newPrice,
-       ingredients:updatedIngredients
+       ingredients:updatedIngredients,
+       totalPrice:newPrice
      })
   }
   removeIngredient=(type)=>{

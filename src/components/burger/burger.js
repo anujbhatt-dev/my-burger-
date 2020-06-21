@@ -6,9 +6,10 @@ const Burger = props =>{
      [...Array(props.ingredients[isKey])].map((_,i)=>{return (
        <BurgerIngredient key={isKey + i} type={isKey}/>
      )})
-   )}).reduce((arr,el)=>{
+   )})
+   .reduce((arr,el)=>{
      return arr.concat(el);
-   },[])
+   })
    if(transformedIngredients.length===0){
      transformedIngredients = <p>please start adding ingredients</p>
    }
